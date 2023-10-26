@@ -30,8 +30,9 @@ namespace Vyvojaky
         {
             panelPracovni = new Panel();
             panelInformaci = new Panel();
-            mMoznosti = new MenuStrip();
             textBox1 = new TextBox();
+            mMoznosti = new MenuStrip();
+            btSpustit = new Button();
             panelInformaci.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,6 +49,7 @@ namespace Vyvojaky
             // panelInformaci
             // 
             panelInformaci.BackColor = Color.White;
+            panelInformaci.Controls.Add(btSpustit);
             panelInformaci.Controls.Add(textBox1);
             panelInformaci.Controls.Add(mMoznosti);
             panelInformaci.Location = new Point(14, 44);
@@ -56,23 +58,32 @@ namespace Vyvojaky
             panelInformaci.Size = new Size(366, 836);
             panelInformaci.TabIndex = 2;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(15, 698);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(202, 27);
+            textBox1.TabIndex = 1;
+            // 
             // mMoznosti
             // 
             mMoznosti.BackColor = Color.Gray;
             mMoznosti.Dock = DockStyle.None;
             mMoznosti.ImageScalingSize = new Size(20, 20);
-            mMoznosti.Location = new Point(34, 66);
+            mMoznosti.Location = new Point(15, 655);
             mMoznosti.Name = "mMoznosti";
             mMoznosti.Size = new Size(202, 24);
             mMoznosti.TabIndex = 0;
             mMoznosti.Text = "menuStrip1";
             // 
-            // textBox1
+            // btSpustit
             // 
-            textBox1.Location = new Point(34, 109);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(202, 27);
-            textBox1.TabIndex = 1;
+            btSpustit.Location = new Point(15, 744);
+            btSpustit.Name = "btSpustit";
+            btSpustit.Size = new Size(117, 34);
+            btSpustit.TabIndex = 2;
+            btSpustit.Text = "Spustit";
+            btSpustit.UseVisualStyleBackColor = true;
             // 
             // formHlavniProTvorbu
             // 
@@ -95,5 +106,6 @@ namespace Vyvojaky
         private Panel panelInformaci;
         private TextBox textBox1;
         private MenuStrip mMoznosti;
+        private Button btSpustit;
     }
 }
