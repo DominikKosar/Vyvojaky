@@ -31,8 +31,7 @@ namespace Vyvojaky
             panelPracovni = new Panel();
             panelInformaci = new Panel();
             mMoznosti = new MenuStrip();
-            tbVstup = new TextBox();
-            btSpustit = new Button();
+            textBox1 = new TextBox();
             panelInformaci.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,8 +48,7 @@ namespace Vyvojaky
             // panelInformaci
             // 
             panelInformaci.BackColor = Color.White;
-            panelInformaci.Controls.Add(btSpustit);
-            panelInformaci.Controls.Add(tbVstup);
+            panelInformaci.Controls.Add(textBox1);
             panelInformaci.Controls.Add(mMoznosti);
             panelInformaci.Location = new Point(14, 44);
             panelInformaci.Margin = new Padding(3, 4, 3, 4);
@@ -63,29 +61,18 @@ namespace Vyvojaky
             mMoznosti.BackColor = Color.Gray;
             mMoznosti.Dock = DockStyle.None;
             mMoznosti.ImageScalingSize = new Size(20, 20);
-            mMoznosti.Location = new Point(27, 358);
+            mMoznosti.Location = new Point(34, 66);
             mMoznosti.Name = "mMoznosti";
             mMoznosti.Size = new Size(202, 24);
             mMoznosti.TabIndex = 0;
             mMoznosti.Text = "menuStrip1";
             // 
-            // tbVstup
+            // textBox1
             // 
-            tbVstup.BackColor = SystemColors.ButtonShadow;
-            tbVstup.Location = new Point(27, 401);
-            tbVstup.Name = "tbVstup";
-            tbVstup.Size = new Size(219, 27);
-            tbVstup.TabIndex = 1;
-            // 
-            // btSpustit
-            // 
-            btSpustit.BackColor = Color.Gray;
-            btSpustit.Location = new Point(27, 445);
-            btSpustit.Name = "btSpustit";
-            btSpustit.Size = new Size(135, 36);
-            btSpustit.TabIndex = 2;
-            btSpustit.Text = "Spustit";
-            btSpustit.UseVisualStyleBackColor = false;
+            textBox1.Location = new Point(34, 109);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(202, 27);
+            textBox1.TabIndex = 1;
             // 
             // formHlavniProTvorbu
             // 
@@ -106,8 +93,7 @@ namespace Vyvojaky
         #endregion
         private Panel panelPracovni;
         private Panel panelInformaci;
-        private TextBox tbVstup;
+        private TextBox textBox1;
         private MenuStrip mMoznosti;
-        private Button btSpustit;
     }
 }
