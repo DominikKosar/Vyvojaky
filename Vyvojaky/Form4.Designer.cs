@@ -30,10 +30,11 @@ namespace Vyvojaky
         {
             panelPracovni = new Panel();
             panelInformaci = new Panel();
+            lbTyp = new Label();
             btSpustit = new Button();
             textBox1 = new TextBox();
             mMoznosti = new MenuStrip();
-            typyToolStripMenuItem = new ToolStripMenuItem();
+            menuTypy = new ToolStripMenuItem();
             int16ToolStripMenuItem = new ToolStripMenuItem();
             int32ToolStripMenuItem = new ToolStripMenuItem();
             int64ToolStripMenuItem = new ToolStripMenuItem();
@@ -59,6 +60,7 @@ namespace Vyvojaky
             // panelInformaci
             // 
             panelInformaci.BackColor = Color.White;
+            panelInformaci.Controls.Add(lbTyp);
             panelInformaci.Controls.Add(btSpustit);
             panelInformaci.Controls.Add(textBox1);
             panelInformaci.Controls.Add(mMoznosti);
@@ -67,6 +69,15 @@ namespace Vyvojaky
             panelInformaci.Name = "panelInformaci";
             panelInformaci.Size = new Size(366, 836);
             panelInformaci.TabIndex = 2;
+            // 
+            // lbTyp
+            // 
+            lbTyp.AutoSize = true;
+            lbTyp.Location = new Point(99, 663);
+            lbTyp.Name = "lbTyp";
+            lbTyp.Size = new Size(32, 20);
+            lbTyp.TabIndex = 3;
+            lbTyp.Text = "Typ";
             // 
             // btSpustit
             // 
@@ -89,67 +100,75 @@ namespace Vyvojaky
             mMoznosti.BackColor = Color.Gray;
             mMoznosti.Dock = DockStyle.None;
             mMoznosti.ImageScalingSize = new Size(20, 20);
-            mMoznosti.Items.AddRange(new ToolStripItem[] { typyToolStripMenuItem });
+            mMoznosti.Items.AddRange(new ToolStripItem[] { menuTypy });
             mMoznosti.Location = new Point(15, 655);
             mMoznosti.Name = "mMoznosti";
-            mMoznosti.Size = new Size(61, 28);
+            mMoznosti.Size = new Size(211, 28);
             mMoznosti.TabIndex = 0;
             mMoznosti.Text = "menuStrip1";
             // 
-            // typyToolStripMenuItem
+            // menuTypy
             // 
-            typyToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { int16ToolStripMenuItem, int32ToolStripMenuItem, int64ToolStripMenuItem, floatToolStripMenuItem, doubleToolStripMenuItem, boolToolStripMenuItem, stringToolStripMenuItem, charToolStripMenuItem });
-            typyToolStripMenuItem.Name = "typyToolStripMenuItem";
-            typyToolStripMenuItem.Size = new Size(53, 24);
-            typyToolStripMenuItem.Text = "Typy";
+            menuTypy.DropDownItems.AddRange(new ToolStripItem[] { int16ToolStripMenuItem, int32ToolStripMenuItem, int64ToolStripMenuItem, floatToolStripMenuItem, doubleToolStripMenuItem, boolToolStripMenuItem, stringToolStripMenuItem, charToolStripMenuItem });
+            menuTypy.Name = "menuTypy";
+            menuTypy.Size = new Size(53, 24);
+            menuTypy.Text = "Typy";
             // 
             // int16ToolStripMenuItem
             // 
             int16ToolStripMenuItem.Name = "int16ToolStripMenuItem";
             int16ToolStripMenuItem.Size = new Size(224, 26);
             int16ToolStripMenuItem.Text = "Int16";
+            int16ToolStripMenuItem.Click += int16ToolStripMenuItem_Click;
             // 
             // int32ToolStripMenuItem
             // 
             int32ToolStripMenuItem.Name = "int32ToolStripMenuItem";
             int32ToolStripMenuItem.Size = new Size(224, 26);
             int32ToolStripMenuItem.Text = "Int32";
+            int32ToolStripMenuItem.Click += int32ToolStripMenuItem_Click;
             // 
             // int64ToolStripMenuItem
             // 
             int64ToolStripMenuItem.Name = "int64ToolStripMenuItem";
             int64ToolStripMenuItem.Size = new Size(224, 26);
             int64ToolStripMenuItem.Text = "Int64";
+            int64ToolStripMenuItem.Click += int64ToolStripMenuItem_Click;
             // 
             // floatToolStripMenuItem
             // 
             floatToolStripMenuItem.Name = "floatToolStripMenuItem";
             floatToolStripMenuItem.Size = new Size(224, 26);
             floatToolStripMenuItem.Text = "Float";
+            floatToolStripMenuItem.Click += floatToolStripMenuItem_Click;
             // 
             // doubleToolStripMenuItem
             // 
             doubleToolStripMenuItem.Name = "doubleToolStripMenuItem";
             doubleToolStripMenuItem.Size = new Size(224, 26);
             doubleToolStripMenuItem.Text = "Double";
+            doubleToolStripMenuItem.Click += doubleToolStripMenuItem_Click;
             // 
             // boolToolStripMenuItem
             // 
             boolToolStripMenuItem.Name = "boolToolStripMenuItem";
             boolToolStripMenuItem.Size = new Size(224, 26);
             boolToolStripMenuItem.Text = "Bool";
+            boolToolStripMenuItem.Click += boolToolStripMenuItem_Click;
             // 
             // stringToolStripMenuItem
             // 
             stringToolStripMenuItem.Name = "stringToolStripMenuItem";
             stringToolStripMenuItem.Size = new Size(224, 26);
             stringToolStripMenuItem.Text = "String";
+            stringToolStripMenuItem.Click += stringToolStripMenuItem_Click;
             // 
             // charToolStripMenuItem
             // 
             charToolStripMenuItem.Name = "charToolStripMenuItem";
             charToolStripMenuItem.Size = new Size(224, 26);
             charToolStripMenuItem.Text = "Char";
+            charToolStripMenuItem.Click += charToolStripMenuItem_Click;
             // 
             // formHlavniProTvorbu
             // 
@@ -175,7 +194,7 @@ namespace Vyvojaky
         private TextBox textBox1;
         private MenuStrip mMoznosti;
         private Button btSpustit;
-        private ToolStripMenuItem typyToolStripMenuItem;
+        private ToolStripMenuItem menuTypy;
         private ToolStripMenuItem int16ToolStripMenuItem;
         private ToolStripMenuItem int32ToolStripMenuItem;
         private ToolStripMenuItem int64ToolStripMenuItem;
@@ -184,5 +203,6 @@ namespace Vyvojaky
         private ToolStripMenuItem boolToolStripMenuItem;
         private ToolStripMenuItem stringToolStripMenuItem;
         private ToolStripMenuItem charToolStripMenuItem;
+        private Label lbTyp;
     }
 }
