@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Vyvojaky
 {
-    public partial class Form4 : Form
+    public partial class formHlavniProTvorbu : Form
     {
-        public Form4()
+        public formHlavniProTvorbu()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

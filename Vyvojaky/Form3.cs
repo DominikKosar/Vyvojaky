@@ -19,7 +19,8 @@ namespace Vyvojaky
 
         private void btExistujici_Click(object sender, EventArgs e)
         {
-
+            Form tvorba = new formHlavniProTvorbu();
+            tvorba.Show();
         }
     }
 }
