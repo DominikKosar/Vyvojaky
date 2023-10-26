@@ -49,7 +49,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Name = "formHlavniProTvorbu";
-            Text = "Form4";
+            Text = "Tvorba";
             ResumeLayout(false);
         }
 
