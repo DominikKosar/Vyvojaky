@@ -1,4 +1,4 @@
-﻿namespace Vyvojaky
+namespace Vyvojaky
 {
     partial class formHlavniProTvorbu
     {
@@ -28,7 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panelPracovni = new Panel();
+            panelInformaci = new Panel();
             SuspendLayout();
+            // 
+            // panelPracovni
+            // 
+            panelPracovni.AutoScroll = true;
+            panelPracovni.BackColor = Color.White;
+            panelPracovni.Location = new Point(714, 126);
+            panelPracovni.Name = "panelPracovni";
+            panelPracovni.Size = new Size(543, 519);
+            panelPracovni.TabIndex = 1;
+            // 
+            // panelInformaci
+            // 
+            panelInformaci.BackColor = Color.White;
+            panelInformaci.Location = new Point(12, 78);
+            panelInformaci.Name = "panelInformaci";
+            panelInformaci.Size = new Size(288, 453);
+            panelInformaci.TabIndex = 2;
             // 
             // formHlavniProTvorbu
             // 
@@ -37,11 +56,16 @@
             BackColor = Color.FromArgb(0, 192, 192);
             ClientSize = new Size(700, 338);
             Margin = new Padding(3, 2, 3, 2);
+            ClientSize = new Size(1269, 670);
+            Controls.Add(panelInformaci);
+            Controls.Add(panelPracovni);
             Name = "formHlavniProTvorbu";
             Text = "Tvorba";
             ResumeLayout(false);
         }
 
         #endregion
+        private Panel panelPracovni;
+        private Panel panelInformaci;
     }
 }
