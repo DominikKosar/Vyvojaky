@@ -28,33 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            panelPracovni = new Panel();
+            panelInformaci = new Panel();
             SuspendLayout();
             // 
-            // button1
+            // panelPracovni
             // 
-            button1.Location = new Point(190, 42);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            panelPracovni.AutoScroll = true;
+            panelPracovni.BackColor = Color.White;
+            panelPracovni.Location = new Point(714, 126);
+            panelPracovni.Name = "panelPracovni";
+            panelPracovni.Size = new Size(543, 519);
+            panelPracovni.TabIndex = 1;
+            // 
+            // panelInformaci
+            // 
+            panelInformaci.BackColor = Color.White;
+            panelInformaci.Location = new Point(12, 78);
+            panelInformaci.Name = "panelInformaci";
+            panelInformaci.Size = new Size(288, 453);
+            panelInformaci.TabIndex = 2;
             // 
             // formHlavniProTvorbu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 192, 192);
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            ClientSize = new Size(1269, 670);
+            Controls.Add(panelInformaci);
+            Controls.Add(panelPracovni);
             Name = "formHlavniProTvorbu";
             Text = "Tvorba";
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Button button1;
+        private Panel panelPracovni;
+        private Panel panelInformaci;
     }
 }
