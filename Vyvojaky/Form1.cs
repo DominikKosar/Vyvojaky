@@ -1,22 +1,23 @@
 namespace Vyvojaky
 {
-    public partial class Form1 : Form
+    public partial class formUvitaci : Form
     {
 
-        public Form1()
+        public formUvitaci()
         {
             InitializeComponent();
         }
 
         private void btNovySoubor_Click(object sender, EventArgs e)
         {
-            Form novySoubor = new Form2();
+            Form novySoubor = new formNovySoubor();
             novySoubor.Show();
         }
 
         private void btExistujici_Click(object sender, EventArgs e)
         {
-
+            Form existujici = new formExistujiciSoubory();
+            existujici.Show();
         }
     }
 }

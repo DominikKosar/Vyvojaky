@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Vyvojaky
 {
-    public partial class formNovySoubor : Form
+    public partial class formExistujiciSoubory : Form
     {
-        public formNovySoubor()
+        public formExistujiciSoubory()
         {
             InitializeComponent();
         }
 
-        private void btVytvorit_Click(object sender, EventArgs e)
+        private void btExistujici_Click(object sender, EventArgs e)
         {
 
         }

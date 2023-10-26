@@ -1,14 +1,14 @@
 ﻿namespace Vyvojaky
 {
-    partial class formUvitaci
+    partial class formExistujiciSoubory
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,51 +23,39 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            btNovySoubor = new Button();
             btExistujici = new Button();
             SuspendLayout();
             // 
-            // btNovySoubor
-            // 
-            btNovySoubor.Location = new Point(208, 244);
-            btNovySoubor.Name = "btNovySoubor";
-            btNovySoubor.Size = new Size(121, 40);
-            btNovySoubor.TabIndex = 0;
-            btNovySoubor.Text = "Nový soubor";
-            btNovySoubor.UseVisualStyleBackColor = true;
-            btNovySoubor.Click += btNovySoubor_Click;
-            // 
             // btExistujici
             // 
-            btExistujici.Location = new Point(389, 245);
+            btExistujici.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btExistujici.Location = new Point(517, 310);
             btExistujici.Name = "btExistujici";
-            btExistujici.Size = new Size(143, 40);
-            btExistujici.TabIndex = 1;
-            btExistujici.Text = "Existující soubor";
+            btExistujici.Size = new Size(271, 71);
+            btExistujici.TabIndex = 0;
+            btExistujici.Text = "Otevřít existující soubor";
             btExistujici.UseVisualStyleBackColor = true;
             btExistujici.Click += btExistujici_Click;
             // 
-            // formUvitaci
+            // formExistujiciSoubory
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 192, 192);
             ClientSize = new Size(800, 450);
             Controls.Add(btExistujici);
-            Controls.Add(btNovySoubor);
-            Name = "formUvitaci";
-            Text = "Vyvojaky - uvitaci";
+            Name = "formExistujiciSoubory";
+            Text = "Existující soubory";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button btNovySoubor;
         private Button btExistujici;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Vyvojaky
 {
-    partial class Form2
+    partial class formNovySoubor
     {
         /// <summary>
         /// Required designer variable.
@@ -63,7 +63,7 @@
             btVytvorit.UseVisualStyleBackColor = true;
             btVytvorit.Click += btVytvorit_Click;
             // 
-            // Form2
+            // formNovySoubor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -72,7 +72,7 @@
             Controls.Add(btVytvorit);
             Controls.Add(tbVstupNazevSouboru);
             Controls.Add(lbNazev);
-            Name = "Form2";
+            Name = "formNovySoubor";
             Text = "Nový soubor";
             ResumeLayout(false);
             PerformLayout();
