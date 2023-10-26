@@ -44,7 +44,7 @@
             // 
             // btExistujici
             // 
-            btExistujici.Location = new Point(389, 244);
+            btExistujici.Location = new Point(389, 245);
             btExistujici.Name = "btExistujici";
             btExistujici.Size = new Size(143, 40);
             btExistujici.TabIndex = 1;
