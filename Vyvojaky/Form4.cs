@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Vyvojaky
 {
-    public partial class formNovySoubor : Form
+    public partial class Form4 : Form
     {
-        public formNovySoubor()
+        public Form4()
         {
             InitializeComponent();
-        }
-
-        private void btVytvorit_Click(object sender, EventArgs e)
-        {
-            Form tvorba = new formHlavniProTvorbu();
-            tvorba.Show();
         }
     }
 }
