@@ -28,32 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btNovySoubor = new Button();
+            btExistujici = new Button();
             SuspendLayout();
             // 
-            // button1
+            // btNovySoubor
             // 
-            button1.Location = new Point(198, 182);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btNovySoubor.Location = new Point(208, 244);
+            btNovySoubor.Name = "btNovySoubor";
+            btNovySoubor.Size = new Size(121, 40);
+            btNovySoubor.TabIndex = 0;
+            btNovySoubor.Text = "Nový soubor";
+            btNovySoubor.UseVisualStyleBackColor = true;
+            btNovySoubor.Click += btNovySoubor_Click;
+            // 
+            // btExistujici
+            // 
+            btExistujici.Location = new Point(389, 244);
+            btExistujici.Name = "btExistujici";
+            btExistujici.Size = new Size(143, 40);
+            btExistujici.TabIndex = 1;
+            btExistujici.Text = "Existující soubor";
+            btExistujici.UseVisualStyleBackColor = true;
+            btExistujici.Click += btExistujici_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(0, 192, 192);
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(btExistujici);
+            Controls.Add(btNovySoubor);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Vyvojaky - uvitaci";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
+        private Button btNovySoubor;
+        private Button btExistujici;
     }
 }

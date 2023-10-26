@@ -7,7 +7,12 @@ namespace Vyvojaky
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btNovySoubor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btExistujici_Click(object sender, EventArgs e)
         {
 
         }
