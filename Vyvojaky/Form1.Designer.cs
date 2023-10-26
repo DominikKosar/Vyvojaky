@@ -34,9 +34,10 @@
             // 
             // btNovySoubor
             // 
-            btNovySoubor.Location = new Point(208, 244);
+            btNovySoubor.Location = new Point(182, 183);
+            btNovySoubor.Margin = new Padding(3, 2, 3, 2);
             btNovySoubor.Name = "btNovySoubor";
-            btNovySoubor.Size = new Size(121, 40);
+            btNovySoubor.Size = new Size(106, 30);
             btNovySoubor.TabIndex = 0;
             btNovySoubor.Text = "Nový soubor";
             btNovySoubor.UseVisualStyleBackColor = true;
@@ -44,22 +45,23 @@
             // 
             // btExistujici
             // 
-            btExistujici.Location = new Point(389, 245);
+            btExistujici.Location = new Point(340, 184);
+            btExistujici.Margin = new Padding(3, 2, 3, 2);
             btExistujici.Name = "btExistujici";
-            btExistujici.Size = new Size(143, 40);
+            btExistujici.Size = new Size(125, 30);
             btExistujici.TabIndex = 1;
             btExistujici.Text = "Existující soubor";
             btExistujici.UseVisualStyleBackColor = true;
-            btExistujici.Click += btExistujici_Click;
             // 
             // formUvitaci
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 192, 192);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(btExistujici);
             Controls.Add(btNovySoubor);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "formUvitaci";
             Text = "Vyvojaky - uvitaci";
             ResumeLayout(false);
