@@ -1,4 +1,4 @@
-﻿namespace Vyvojaky
+namespace Vyvojaky
 {
     partial class formHlavniProTvorbu
     {
@@ -51,9 +51,11 @@
             // 
             // formHlavniProTvorbu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 192, 192);
+            ClientSize = new Size(700, 338);
+            Margin = new Padding(3, 2, 3, 2);
             ClientSize = new Size(1269, 670);
             Controls.Add(panelInformaci);
             Controls.Add(panelPracovni);
