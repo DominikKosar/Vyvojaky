@@ -30,42 +30,84 @@ namespace Vyvojaky
         {
             panelPracovni = new Panel();
             panelInformaci = new Panel();
+            mMoznosti = new MenuStrip();
+            tbVstup = new TextBox();
+            btSpustit = new Button();
+            panelInformaci.SuspendLayout();
             SuspendLayout();
             // 
             // panelPracovni
             // 
             panelPracovni.AutoScroll = true;
             panelPracovni.BackColor = Color.White;
-            panelPracovni.Location = new Point(714, 126);
+            panelPracovni.Location = new Point(809, 44);
+            panelPracovni.Margin = new Padding(3, 4, 3, 4);
             panelPracovni.Name = "panelPracovni";
-            panelPracovni.Size = new Size(543, 519);
+            panelPracovni.Size = new Size(628, 836);
             panelPracovni.TabIndex = 1;
             // 
             // panelInformaci
             // 
             panelInformaci.BackColor = Color.White;
-            panelInformaci.Location = new Point(12, 78);
+            panelInformaci.Controls.Add(btSpustit);
+            panelInformaci.Controls.Add(tbVstup);
+            panelInformaci.Controls.Add(mMoznosti);
+            panelInformaci.Location = new Point(14, 44);
+            panelInformaci.Margin = new Padding(3, 4, 3, 4);
             panelInformaci.Name = "panelInformaci";
-            panelInformaci.Size = new Size(288, 453);
+            panelInformaci.Size = new Size(366, 836);
             panelInformaci.TabIndex = 2;
+            // 
+            // mMoznosti
+            // 
+            mMoznosti.BackColor = Color.Gray;
+            mMoznosti.Dock = DockStyle.None;
+            mMoznosti.ImageScalingSize = new Size(20, 20);
+            mMoznosti.Location = new Point(27, 358);
+            mMoznosti.Name = "mMoznosti";
+            mMoznosti.Size = new Size(202, 24);
+            mMoznosti.TabIndex = 0;
+            mMoznosti.Text = "menuStrip1";
+            // 
+            // tbVstup
+            // 
+            tbVstup.BackColor = SystemColors.ButtonShadow;
+            tbVstup.Location = new Point(27, 401);
+            tbVstup.Name = "tbVstup";
+            tbVstup.Size = new Size(219, 27);
+            tbVstup.TabIndex = 1;
+            // 
+            // btSpustit
+            // 
+            btSpustit.BackColor = Color.Gray;
+            btSpustit.Location = new Point(27, 445);
+            btSpustit.Name = "btSpustit";
+            btSpustit.Size = new Size(135, 36);
+            btSpustit.TabIndex = 2;
+            btSpustit.Text = "Spustit";
+            btSpustit.UseVisualStyleBackColor = false;
             // 
             // formHlavniProTvorbu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 192, 192);
-            ClientSize = new Size(700, 338);
-            Margin = new Padding(3, 2, 3, 2);
-            ClientSize = new Size(1269, 670);
+            ClientSize = new Size(1450, 893);
             Controls.Add(panelInformaci);
             Controls.Add(panelPracovni);
+            MainMenuStrip = mMoznosti;
             Name = "formHlavniProTvorbu";
             Text = "Tvorba";
+            panelInformaci.ResumeLayout(false);
+            panelInformaci.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
         private Panel panelPracovni;
         private Panel panelInformaci;
+        private TextBox tbVstup;
+        private MenuStrip mMoznosti;
+        private Button btSpustit;
     }
 }
