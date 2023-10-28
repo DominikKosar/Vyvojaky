@@ -28,11 +28,15 @@ namespace Vyvojaky
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panelPracovni = new Panel();
             panelInformaci = new Panel();
-            lbTyp = new Label();
-            btSpustit = new Button();
-            textBox1 = new TextBox();
+            lbHodnota = new Label();
+            tbHodnota = new TextBox();
+            lbTypPopis = new Label();
+            lbNazevPromenne = new Label();
+            btPridat = new Button();
+            tbNazevPromenne = new TextBox();
             mMoznosti = new MenuStrip();
             menuTypy = new ToolStripMenuItem();
             int16ToolStripMenuItem = new ToolStripMenuItem();
@@ -45,6 +49,7 @@ namespace Vyvojaky
             charToolStripMenuItem = new ToolStripMenuItem();
             panelConsole = new Panel();
             tbConsole = new TextBox();
+            mainTimer = new System.Windows.Forms.Timer(components);
             panelInformaci.SuspendLayout();
             mMoznosti.SuspendLayout();
             panelConsole.SuspendLayout();
@@ -63,52 +68,83 @@ namespace Vyvojaky
             // panelInformaci
             // 
             panelInformaci.BackColor = Color.Gray;
-            panelInformaci.Controls.Add(lbTyp);
-            panelInformaci.Controls.Add(btSpustit);
-            panelInformaci.Controls.Add(textBox1);
+            panelInformaci.Controls.Add(lbHodnota);
+            panelInformaci.Controls.Add(tbHodnota);
+            panelInformaci.Controls.Add(lbTypPopis);
+            panelInformaci.Controls.Add(lbNazevPromenne);
+            panelInformaci.Controls.Add(btPridat);
+            panelInformaci.Controls.Add(tbNazevPromenne);
             panelInformaci.Controls.Add(mMoznosti);
             panelInformaci.Location = new Point(10, 38);
             panelInformaci.Name = "panelInformaci";
             panelInformaci.Size = new Size(252, 361);
             panelInformaci.TabIndex = 2;
             // 
-            // lbTyp
+            // lbHodnota
             // 
-            lbTyp.AutoSize = true;
-            lbTyp.Location = new Point(87, 497);
-            lbTyp.Name = "lbTyp";
-            lbTyp.Size = new Size(25, 15);
-            lbTyp.TabIndex = 3;
-            lbTyp.Text = "Typ";
+            lbHodnota.AutoSize = true;
+            lbHodnota.Location = new Point(8, 86);
+            lbHodnota.Name = "lbHodnota";
+            lbHodnota.Size = new Size(54, 15);
+            lbHodnota.TabIndex = 7;
+            lbHodnota.Text = "Hodnota";
             // 
-            // btSpustit
+            // tbHodnota
             // 
-            btSpustit.Location = new Point(13, 558);
-            btSpustit.Margin = new Padding(3, 2, 3, 2);
-            btSpustit.Name = "btSpustit";
-            btSpustit.Size = new Size(102, 26);
-            btSpustit.TabIndex = 2;
-            btSpustit.Text = "Spustit";
-            btSpustit.UseVisualStyleBackColor = true;
+            tbHodnota.Location = new Point(69, 83);
+            tbHodnota.Margin = new Padding(3, 2, 3, 2);
+            tbHodnota.Name = "tbHodnota";
+            tbHodnota.Size = new Size(154, 23);
+            tbHodnota.TabIndex = 6;
             // 
-            // textBox1
+            // lbTypPopis
             // 
-            textBox1.Location = new Point(13, 524);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(177, 23);
-            textBox1.TabIndex = 1;
+            lbTypPopis.AutoSize = true;
+            lbTypPopis.Location = new Point(8, 32);
+            lbTypPopis.Name = "lbTypPopis";
+            lbTypPopis.Size = new Size(25, 15);
+            lbTypPopis.TabIndex = 5;
+            lbTypPopis.Text = "Typ";
+            // 
+            // lbNazevPromenne
+            // 
+            lbNazevPromenne.AutoSize = true;
+            lbNazevPromenne.Location = new Point(8, 59);
+            lbNazevPromenne.Name = "lbNazevPromenne";
+            lbNazevPromenne.Size = new Size(39, 15);
+            lbNazevPromenne.TabIndex = 4;
+            lbNazevPromenne.Text = "Název";
+            // 
+            // btPridat
+            // 
+            btPridat.Enabled = false;
+            btPridat.Location = new Point(69, 113);
+            btPridat.Margin = new Padding(3, 2, 3, 2);
+            btPridat.Name = "btPridat";
+            btPridat.Size = new Size(86, 26);
+            btPridat.TabIndex = 2;
+            btPridat.Text = "Pøidat";
+            btPridat.UseVisualStyleBackColor = true;
+            btPridat.Click += btPridat_Click;
+            // 
+            // tbNazevPromenne
+            // 
+            tbNazevPromenne.Location = new Point(69, 56);
+            tbNazevPromenne.Margin = new Padding(3, 2, 3, 2);
+            tbNazevPromenne.Name = "tbNazevPromenne";
+            tbNazevPromenne.Size = new Size(154, 23);
+            tbNazevPromenne.TabIndex = 1;
             // 
             // mMoznosti
             // 
-            mMoznosti.BackColor = Color.Gray;
+            mMoznosti.BackColor = Color.White;
             mMoznosti.Dock = DockStyle.None;
             mMoznosti.ImageScalingSize = new Size(20, 20);
             mMoznosti.Items.AddRange(new ToolStripItem[] { menuTypy });
-            mMoznosti.Location = new Point(13, 491);
+            mMoznosti.Location = new Point(69, 28);
             mMoznosti.Name = "mMoznosti";
             mMoznosti.Padding = new Padding(5, 2, 0, 2);
-            mMoznosti.Size = new Size(170, 24);
+            mMoznosti.Size = new Size(50, 24);
             mMoznosti.TabIndex = 0;
             mMoznosti.Text = "menuStrip1";
             // 
@@ -200,12 +236,18 @@ namespace Vyvojaky
             tbConsole.TabStop = false;
             tbConsole.Text = "> ";
             // 
+            // mainTimer
+            // 
+            mainTimer.Enabled = true;
+            mainTimer.Interval = 1;
+            mainTimer.Tick += mainTimer_Tick;
+            // 
             // formHlavniProTvorbu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(1110, 502);
+            ClientSize = new Size(1110, 497);
             Controls.Add(panelConsole);
             Controls.Add(panelInformaci);
             Controls.Add(panelPracovni);
@@ -224,9 +266,9 @@ namespace Vyvojaky
         #endregion
         private Panel panelPracovni;
         private Panel panelInformaci;
-        private TextBox textBox1;
+        private TextBox tbNazevPromenne;
         private MenuStrip mMoznosti;
-        private Button btSpustit;
+        private Button btPridat;
         private ToolStripMenuItem menuTypy;
         private ToolStripMenuItem int16ToolStripMenuItem;
         private ToolStripMenuItem int32ToolStripMenuItem;
@@ -236,8 +278,12 @@ namespace Vyvojaky
         private ToolStripMenuItem boolToolStripMenuItem;
         private ToolStripMenuItem stringToolStripMenuItem;
         private ToolStripMenuItem charToolStripMenuItem;
-        private Label lbTyp;
         private Panel panelConsole;
         private TextBox tbConsole;
+        private Label lbNazevPromenne;
+        private Label lbTypPopis;
+        private Label lbHodnota;
+        private TextBox tbHodnota;
+        private System.Windows.Forms.Timer mainTimer;
     }
 }
