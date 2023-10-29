@@ -52,6 +52,8 @@ namespace Vyvojaky
             mainTimer = new System.Windows.Forms.Timer(components);
             panelInformaci.SuspendLayout();
             mMoznosti.SuspendLayout();
+            panelConsole = new Panel();
+            tbConsole = new TextBox();
             panelConsole.SuspendLayout();
             SuspendLayout();
             // 
@@ -59,10 +61,9 @@ namespace Vyvojaky
             // 
             panelPracovni.AutoScroll = true;
             panelPracovni.BackColor = Color.Gray;
-            panelPracovni.Location = new Point(268, 38);
-            panelPracovni.Margin = new Padding(3, 2, 3, 2);
+            panelPracovni.Location = new Point(306, 50);
             panelPracovni.Name = "panelPracovni";
-            panelPracovni.Size = new Size(832, 361);
+            panelPracovni.Size = new Size(951, 481);
             panelPracovni.TabIndex = 1;
             // 
             // panelInformaci
@@ -75,9 +76,12 @@ namespace Vyvojaky
             panelInformaci.Controls.Add(btPridat);
             panelInformaci.Controls.Add(tbNazevPromenne);
             panelInformaci.Controls.Add(mMoznosti);
-            panelInformaci.Location = new Point(10, 38);
+            panelInformaci.Location = new Point(14, 44);
+            panelInformaci.Margin = new Padding(3, 4, 3, 4);
+            panelInformaci.BackColor = Color.Gray;
+            panelInformaci.Location = new Point(12, 50);
             panelInformaci.Name = "panelInformaci";
-            panelInformaci.Size = new Size(252, 361);
+            panelInformaci.Size = new Size(288, 481);
             panelInformaci.TabIndex = 2;
             // 
             // lbHodnota
@@ -113,7 +117,7 @@ namespace Vyvojaky
             lbNazevPromenne.Name = "lbNazevPromenne";
             lbNazevPromenne.Size = new Size(39, 15);
             lbNazevPromenne.TabIndex = 4;
-            lbNazevPromenne.Text = "Název";
+            lbNazevPromenne.Text = "Nï¿½zev";
             // 
             // btPridat
             // 
@@ -123,7 +127,7 @@ namespace Vyvojaky
             btPridat.Name = "btPridat";
             btPridat.Size = new Size(86, 26);
             btPridat.TabIndex = 2;
-            btPridat.Text = "Pøidat";
+            btPridat.Text = "Pï¿½idat";
             btPridat.UseVisualStyleBackColor = true;
             btPridat.Click += btPridat_Click;
             // 
@@ -136,6 +140,7 @@ namespace Vyvojaky
             tbNazevPromenne.TabIndex = 1;
             // 
             // mMoznosti
+            // panelConsole
             // 
             mMoznosti.BackColor = Color.White;
             mMoznosti.Dock = DockStyle.None;
@@ -147,13 +152,31 @@ namespace Vyvojaky
             mMoznosti.Size = new Size(50, 24);
             mMoznosti.TabIndex = 0;
             mMoznosti.Text = "menuStrip1";
+            panelConsole.BackColor = Color.White;
+            panelConsole.Controls.Add(tbConsole);
+            panelConsole.Location = new Point(12, 545);
+            panelConsole.Name = "panelConsole";
+            panelConsole.Size = new Size(597, 113);
+            panelConsole.TabIndex = 3;
             // 
             // menuTypy
+            // tbConsole
             // 
             menuTypy.DropDownItems.AddRange(new ToolStripItem[] { int16ToolStripMenuItem, int32ToolStripMenuItem, int64ToolStripMenuItem, floatToolStripMenuItem, doubleToolStripMenuItem, boolToolStripMenuItem, stringToolStripMenuItem, charToolStripMenuItem });
             menuTypy.Name = "menuTypy";
             menuTypy.Size = new Size(43, 20);
             menuTypy.Text = "Typy";
+            tbConsole.BackColor = Color.Black;
+            tbConsole.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            tbConsole.ForeColor = Color.White;
+            tbConsole.Location = new Point(3, 3);
+            tbConsole.Multiline = true;
+            tbConsole.Name = "tbConsole";
+            tbConsole.ScrollBars = ScrollBars.Vertical;
+            tbConsole.Size = new Size(591, 107);
+            tbConsole.TabIndex = 0;
+            tbConsole.TabStop = false;
+            tbConsole.Text = "> ";
             // 
             // int16ToolStripMenuItem
             // 
@@ -247,7 +270,7 @@ namespace Vyvojaky
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(1110, 497);
+            ClientSize = new Size(1269, 670);
             Controls.Add(panelConsole);
             Controls.Add(panelInformaci);
             Controls.Add(panelPracovni);
@@ -278,12 +301,8 @@ namespace Vyvojaky
         private ToolStripMenuItem boolToolStripMenuItem;
         private ToolStripMenuItem stringToolStripMenuItem;
         private ToolStripMenuItem charToolStripMenuItem;
+        private Label lbTyp;
         private Panel panelConsole;
         private TextBox tbConsole;
-        private Label lbNazevPromenne;
-        private Label lbTypPopis;
-        private Label lbHodnota;
-        private TextBox tbHodnota;
-        private System.Windows.Forms.Timer mainTimer;
     }
 }
