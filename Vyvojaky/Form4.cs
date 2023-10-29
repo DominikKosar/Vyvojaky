@@ -82,6 +82,7 @@ namespace Vyvojaky
 
         //Objekt pro manipulaci se vsemi promennymi
         Promenne promenne = new Promenne();
+        Podminky podminky = new Podminky();
 
         //Bool pro kontrolu zaskrtnuti typu nove promenne
         bool typChecked = false;
@@ -102,6 +103,7 @@ namespace Vyvojaky
             /*TEST PRO Int16*/
             tbConsole.Text += nazevPromenne + " = " + Convert.ToString(promenne.Int16V[nazevPromenne]) + Environment.NewLine + ">";
             /*KONEC TESTU*/
+            podminky.hledaniPromennych(nazevPromenne);
 
             //Resetuje zadane udaje
             typPromenne = "";
@@ -109,6 +111,8 @@ namespace Vyvojaky
             tbNazevPromenne.Text = "";
             tbHodnota.Text = "";
             typChecked = false;
+
+            
         }
 
         //Metoda pro kontrolu duplikatu
